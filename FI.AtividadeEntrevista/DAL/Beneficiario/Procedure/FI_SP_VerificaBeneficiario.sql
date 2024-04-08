@@ -1,0 +1,7 @@
+﻿CREATE PROC FI_SP_VerificaBeneficiario
+    @CPF VARCHAR(14),
+    @IdCliente INT
+AS
+BEGIN
+    SELECT 1 FROM BENEFICIARIOS WITH (NOLOCK) WHERE CPF = @CPF AND IdCliente = @IdCliente
+END
